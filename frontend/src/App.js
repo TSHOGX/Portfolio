@@ -5,6 +5,7 @@ import React from 'react';
 class App extends React.Component{
   constructor(props){
     super(props);
+    this.repl_url = "http://127.0.0.1:8000"  // http://127.0.0.1:8000 https://djtest.lufei123.repl.co
     this.state = {
       todoList:[],
       activeItem:{
@@ -30,7 +31,7 @@ class App extends React.Component{
   fetchTasks(){
     console.log('Fetching...')
 
-    fetch('http://127.0.0.1:8000/api/task-list/')
+    fetch(`${this.repl_url}/api/task-list/`)
     .then(Response => Response.json())
     // .then(data=>console.log(data))
     .then(data =>
@@ -58,10 +59,10 @@ class App extends React.Component{
     e.preventDefault();
     console.log('ITEM:', this.state.activeItem);
 
-    var url = 'http://127.0.0.1:8000/api/task-create/'
+    var url = `${this.repl_url}/api/task-create/`
 
     if(this.state.editing === true){
-      url = `http://127.0.0.1:8000/api/task-update/${this.state.activeItem.id}/`
+      url = `${this.repl_url}/api/task-update/${this.state.activeItem.id}/`
       this.setState({
         editing:false
       })
@@ -95,7 +96,7 @@ class App extends React.Component{
   }
 
   deleteItem(task){
-    fetch(`http://127.0.0.1:8000/api/task-delete/${task.id}/`, {
+    fetch(`${this.repl_url}/api/task-delete/${task.id}/`, {
       method:'DELETE',
       headers:{
         'Content-type':'application/json',
@@ -107,7 +108,7 @@ class App extends React.Component{
 
   completeItem(task){
     task.completed = !task.completed
-    fetch(`http://127.0.0.1:8000/api/task-update/${task.id}/`, {
+    fetch(`${this.repl_url}/api/task-update/${task.id}/`, {
       method:'POST',
       headers:{
         'Content-type':'application/json',

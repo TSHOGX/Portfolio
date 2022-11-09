@@ -21,12 +21,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'fs^sq92w_8v@s)@f4zt)w#ec-j36&von8%uq(5&=&e%w#=jf+%'
+# SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
+# ALLOWED_HOSTS = [
+#     'cb793ac7-20f5-439f-85c0-c61045ca641b.id.repl.co', 
+#     'djtest.lufei123.repl.co'
+#     '127.0.0.1:8000']
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
