@@ -5,7 +5,7 @@ import React from 'react';
 class App extends React.Component{
   constructor(props){
     super(props);
-    this.repl_url = "http://172.31.44.161:8000"  // http://127.0.0.1:8000 https://djtest.lufei123.repl.co http://3.134.81.74:8000/
+    this.repl_url = "http://3.134.81.74:8000"  // http://127.0.0.1:8000 https://djtest.lufei123.repl.co http://3.134.81.74:8000/
     this.state = {
       todoList:[],
       activeItem:{
