@@ -6,9 +6,9 @@
 /profile/src
 
 # frontend
-/frontend/node_modules
-/frontend/public
-/frontend/src
+/todolist/node_modules
+/todolist/public
+/todolist/src
 
 # misc
 .DS_Store
