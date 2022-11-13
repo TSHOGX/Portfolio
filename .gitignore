@@ -2,13 +2,13 @@
 
 # profile
 /profile/node_modules
-/profile/public
-/profile/src
+# /profile/public
+# /profile/src
 
 # frontend
 /todolist/node_modules
-/todolist/public
-/todolist/src
+# /todolist/public
+# /todolist/src
 
 # misc
 .DS_Store
