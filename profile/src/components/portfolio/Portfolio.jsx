@@ -12,7 +12,7 @@ const data = [
     image: IMG1,
     title: "TODO List",
     github: 'https://github.com',
-    demo: 'http://3.134.81.74:8000/todo',
+    demo: 'http://3.134.81.74:8000/todolist/',
   },
   {
     id: 2,
